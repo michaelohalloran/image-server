@@ -3,5 +3,7 @@ mongoose.set('debug', true);
 mongoose.Promise = Promise; //to use ES6 promises
 mongoose.connect('mongodb://localhost/flyers', {
 	keepAlive: true,
-	useMongoClient: true
+	useNewUrlParser: true
 });
+
+module.exports.User = require('./user');
